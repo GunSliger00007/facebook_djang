@@ -1,0 +1,119 @@
+/* register.css */
+
+.registerPopup {
+    background-color: #e9ebee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    border: 1px solid #dddfe2;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    text-align: center;
+    width: 300px; /* Set the width of the popup */
+    margin: auto; /* Center the popup horizontally */
+    position: absolute;
+    top: -0px; /* Adjust the top position to move it above the login box */
+    left: 0;
+    right: 0;
+  }
+  
+  .registerPopup h2 {
+    font-size: 25px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+  }
+  
+  .row input {
+    height: 35px;
+    margin-bottom: 10px;
+    background-color: white;
+    border: 0.5px solid gray;
+    border-radius: 5px;
+    outline: none;
+    padding-left: 20px;
+    border: 1px solid #dddfe2;
+    color: #1d2129;
+    line-height: 16px;
+    font-size: 17px;
+    vertical-align: middle;
+    margin-right: 10px;
+    width: 90%; /* Adjust the width */
+  }
+  
+  .registerPopup p {
+    font-size: 15px;
+    color: #606770;
+    text-align: center;
+    margin-left: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .registerPopup form center input {
+    height: 35px;
+    margin-bottom: 10px;
+    background-color: white;
+    border: 0.5px solid gray;
+    border-radius: 5px;
+    outline: none;
+    padding-left: 20px;
+    border: 1px solid #dddfe2;
+    color: #1d2129;
+    line-height: 16px;
+    font-size: 17px;
+    vertical-align: middle;
+    margin-right: 10px;
+    width: 90%;
+    margin-left: 10px;
+  }
+  
+  .registerPopup form center input::-webkit-input-placeholder {
+    font-size: 17px;
+    color: rgba(128, 128, 128, 0.8);
+    padding-left: 0px;
+  }
+  
+  .register__register {
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    white-space: nowrap;
+    position: relative;
+    text-align: center;
+    text-shadow: none;
+    vertical-align: middle;
+    font-weight: bold;
+    justify-content: center;
+    background-color: #00a400;
+    border: none;
+    border-radius: 6px;
+    font-size: 20px;
+    line-height: 48px;
+    padding: 0 16px;
+    width: 90%; /* Adjust the width */
+    height: 45px;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  
+  .register_date2 {
+    height: 40px;
+    width: 90%; /* Adjust the width */
+    outline: #ccd0d5;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .register__date3 {
+    height: 40px;
+    width: 90%; /* Adjust the width */
+    outline: #ccd0d5;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  

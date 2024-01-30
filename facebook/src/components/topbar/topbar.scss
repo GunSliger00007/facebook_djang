@@ -1,0 +1,213 @@
+@import '../rootvariables\ .scss';
+
+*{
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+  cursor: pointer;
+}
+.topbarAll {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+  background-color: #fff;
+  align-items: center;
+  z-index: 555;
+  .leftSectionTopbar {
+    flex: 3;
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+    gap: 8px;
+    .searchInput {
+      background-color: var(--searchBtn-bg);
+      padding: 6px 9px 6px 9px;
+      border-radius: 25px;
+      display: flex;
+      align-items: center;
+      svg {
+        color: var(--secondary-font-color);
+        height: 20px;
+        width: 20px;
+      }
+      input {
+        border: none;
+        background: none;
+        padding: 4px 26px 4px 4px;
+        font-size: 15px;
+        color: var(--primary-font-color);
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      :focus {
+        outline: none;
+        border: none;
+      }
+    }
+  }
+  .middleSectionTopbar {
+    flex: 6;
+    ul {
+      display: flex;
+      :link {
+        margin-left: 5px;
+        display: flex;
+        align-items: center;
+        .topbarMenuspacing {
+          height: 53px;
+          width: 111.6px;
+          border-radius: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          span{
+            padding: 7px 12px;
+            border-radius: 8px;
+            background-color: #3b3b3b;
+            position: absolute;
+            bottom: -35px;
+            left: 50%;
+            transform: translate(-50%, );
+            font-size: 13px;
+            display: none;
+          }
+          &:hover {
+            background-color: var(--li-hover-white-bg);
+          }
+        }
+          &:hover span{
+            display: block;
+          }
+        .secondaryIcon {
+          display: none;
+        }
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+      .responsiveIcon {
+        display: none;
+        svg {
+          color: var(--secondary-font-color);
+        }
+        &.active{
+          .topbarMenuspacing{
+          svg{
+            color: var(--primary-color);
+          }
+        }
+      }
+    }
+      .active {
+        border-radius: 10px 10px 0 0;
+        border-bottom: 3px solid var(--primary-color);
+        .secondaryIcon {
+          display: block;
+        }
+        .primaryIcon {
+          display: none;
+        }
+        &:hover .topbarMenuspacing {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+  .topbarBoxShadow {
+    background-image: url(../../asssets/topbarboxshadow.png);
+    background-repeat: repeat-x;
+    background-size: 1px 7px;
+    right: 0;
+    height: 7px;
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    pointer-events: none;
+  }
+}
+  @media screen and (max-width: 1280px) {
+    .topbarAll {
+      .leftSectionTopbar {
+        .searchInput {
+          input {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  @media (min-width: 1100px) and (max-height: 789px), (min-width: 1100px) and (max-width: 1379px){
+  .topbarAll {
+    .middleSectionTopbar {
+      ul {
+        display: flex;
+        :link {
+          min-width: 111.6px;
+        }
+      }
+    }
+  }
+}
+
+  @media screen and (max-width: 1100px) {
+    .topbarAll {
+      .middleSectionTopbar {
+        ul {
+          .gamingTopbar {
+            display: none;
+          }
+          .responsiveIcon {
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 700px) {
+    .topbarAll {
+      .leftSectionTopbar {
+        flex: 0;
+      }
+      .middleSectionTopbar {
+        ul {
+          .responsiveTopbar {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .topbarAll {
+      .middleSectionTopbar {
+        ul {
+          display: flex;
+          :link {
+           .topbarMenuspacing{
+            width: fit-content !important;
+           }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 370px) {
+    .topbarAll {
+      height: 56px;
+      .middleSectionTopbar {
+        ul {
+          .gamingTopbar {
+            display: none;
+          }
+          .responsiveIcon {
+            display: none;
+          }
+        }
+      }
+    }
+  }

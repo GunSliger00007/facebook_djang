@@ -1,0 +1,17 @@
+.middleHomeWrapper{
+    display: flex;
+    flex-basis: 809px;
+    margin-top: 16px;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 0 32px;
+    justify-content: center;
+}
+
+@media screen and (max-width: 600px) {
+    .middleHomeWrapper{
+        width: 100%;
+        padding: 0;
+    }
+}

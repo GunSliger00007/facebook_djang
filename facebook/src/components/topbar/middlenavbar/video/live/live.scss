@@ -1,0 +1,153 @@
+@import '../../../../rootvariables\ .scss';
+
+.liveVideosWrapper{
+    width: 100%;
+    .livescreen{
+        margin: 0 25px;
+        background-color: #fff;
+        
+        .videolive{
+            position: relative;
+            height: 100%;
+            height: 530px;
+            .liveTopHead{
+                    position: absolute;
+                    top: 12px;
+                    left: 0;
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+                    height: 24px;
+                    .liveCount{
+                        gap: 6px;
+                        padding-left: 12px;
+                        display: flex;
+                        p{
+                            color: #fff;
+                            background-color: #bec3c9;
+                            padding: 4px 6px;
+                            border-radius: 4px;
+                            font-size: .8125rem;
+                        font-weight: 600;    
+                        line-height: 1.2308;                    
+                    }
+                        .liveNumber{
+                            display: flex;
+                            background-color: rgba(0, 0, 0, 0.6);
+                            padding: 0 6px;
+                            border-radius: 4px;
+                            align-items: center;
+                            gap: 2px;
+                            svg{
+                                color: #fff;
+                                font-size: 12px;
+                            }
+                            span{
+                                color: #fff;
+                                font-size: .8125rem;
+
+                            }
+                        }
+                    }
+                    i{
+                        color: #fff;
+                        font-size: 22px;
+                        padding-right: 12px;
+                    }
+            }
+            .liveDescription{
+                position: absolute;
+                bottom: 20px;
+                left: 12px;
+                display: flex;
+                gap: 12px;
+                .Thumb{
+                    img{
+                        border-radius: 50%;
+                    } 
+                    
+                }
+                .liveTitle{
+                    span{
+                        font-size: 1.25rem;
+                        line-height: 1.2;
+                        color: #fff;
+                        font-weight: 400;
+                        cursor: pointer;
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
+                    li{
+                        a{
+                            color: #fff;
+                            &:hover{
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+        .commentlikescontainer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 8px 12px;
+            .reactlinks {
+              ul {
+                display: flex;
+                gap: 5px;
+                li {
+                  border-radius: 5px;
+                  padding: 5px 10px;
+                  .reactBtn {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    font-size: 0.8125rem;
+                    color: var(--secondary-font-color);
+                    font-weight: 600;
+                    i {
+                      filter: invert(39%) sepia(21%) saturate(200%) saturate(109.5%)
+                        hue-rotate(174deg) brightness(94%) contrast(86%);
+                    }
+                  }
+                  &:hover {
+                    background-color: var(--li-hover-bg);
+                  }
+                }
+              }
+            }
+            .commentlikesCounter {
+              ul {
+                display: flex;
+                gap: 12px;
+                li {
+                  p {
+                    font-size: 0.8125rem;
+                    color: var(--primary-font-color);
+                    &:hover {
+                      text-decoration: underline;
+                    }
+                  }
+                  &:nth-child(2),
+                  &:nth-child(3) {
+                    position: relative;
+                    &::before {
+                      position: absolute;
+                      left: -8px;
+                      top: 50%;
+                      content: "";
+                      height: 2px;
+                      width: 2px;
+                      background-color: #646363;
+                    }
+                  }
+                }
+              }
+            }
+          }
+    }
+}

@@ -1,0 +1,179 @@
+@import '../../../../rootvariables\ .scss';
+.savedVideoWrapper{
+    width: 100%;
+    .savedTitle{
+        background-color: #fff;
+        padding: 24px 12px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        position: sticky;
+    top: 56px;
+    z-index: 1;
+        .savedPath{
+            p{
+                display: flex;
+                align-items: center;
+            }
+        }
+        h4{
+            font-size: 1.5rem;
+            color: var( --primary-font-color);
+            padding: 4px 0;
+        }
+    }
+    .videosSection{
+        margin-top: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        .videoContent1{
+            margin: 0 auto;
+            width: 733px;
+            position: relative;
+            gap: 16px;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            .savedVideo{
+                position: relative;
+                border-radius: 8px;
+                width: 276px;
+                height: 156px;
+                justify-content: center;
+                background-color: black;
+                display: flex;
+                cursor: pointer;
+                img{
+                    object-fit: cover;
+                    height: 100%;
+                    width: 156px;
+                }
+                .playIcon{
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    display: none;
+                    i{
+                        color: #fff;
+                        width: 42px;
+                        height: 42px;
+                        border-radius: 50%;
+                        border: 3px solid #fff;
+                        position: relative;
+                        display: block;
+                        svg{
+                            position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    font-size: 36px;
+
+                        }
+                    }
+                }
+                &:hover .playIcon{
+                    display: block;
+                }
+            }
+            .videoDetail{
+                .userDetail{
+                    display: flex;
+                    gap: 8px;
+                    .userThumb{
+                        img{
+                            height: 36px;
+                            width: 36px;
+                            border-radius: 50%;
+                        }
+                    }
+                    .userName{
+                        display: flex;
+                        flex-direction: column;
+                        p{
+                            font-size: var(--regular-font-size);
+                            color: var(--primary-font-color);
+                            font-weight: 600;
+                        }
+                        span{
+                            font-size: 0.8125rem;
+                        color: var(--secondary-font-color);
+                        }
+                    }
+                }
+                .videoTitle{
+                    h5{
+                        font-weight: 600;
+                        font-size: 1.0625rem;
+                        color: var(--primary-font-color);
+                        cursor: pointer;
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+
+                .commentlikesCounter {
+                    padding: 4px;
+                  ul {
+                    display: flex;
+                    gap: 12px;
+                    li {
+                      p {
+                        font-size: 0.8125rem;
+                        color: var(--secondary-font-color);
+                        &:hover {
+                          text-decoration: underline;
+                        }
+                      }
+                      &:nth-child(2),
+                      &:nth-child(3) {
+                        position: relative;
+                        &::before {
+                          position: absolute;
+                          left: -8px;
+                          top: 50%;
+                          content: "";
+                          height: 2px;
+                          width: 2px;
+                          background-color: #646363;
+                        }
+                      }
+                    }
+                  }
+                }
+                .menuIcon{
+                    position: absolute;
+                    top: 20px;
+                    right: 20px;
+                    cursor: pointer;
+                    border-radius: 50%;
+                    i{
+                        display: block;
+                        height: 36px;
+                        width: 36px;
+                        border-radius: 50%;
+                        position: relative;
+                        svg{
+                            position: absolute;
+                            left: 50%;
+                            top: 50%;
+                            transform: translate(-50%, -50%);
+                            font-size: 22px; 
+                        }
+                        &:hover {
+                            background-color: #f1f2f3;
+                          }
+                    }
+                   
+                }
+              }
+        }
+    }
+    @media screen and (max-width: 1130px) {
+        .videoContent1{
+            width: 100% !important;
+        }
+    }

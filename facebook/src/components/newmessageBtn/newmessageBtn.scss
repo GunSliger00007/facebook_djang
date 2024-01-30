@@ -1,0 +1,145 @@
+.newChatWrapper{
+  position: fixed;
+  z-index: 777;
+  right: 16px;
+  bottom: 16px;
+  cursor: pointer;
+  .newMessageBtn{
+    .positionRelne{
+      position: relative;
+    .newMessageIcon{
+      border-radius: 50%;
+      background-color: #fff;
+      border: 1ps solid rgba(0, 0, 0, 0.4);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1),0 12px 28px rgba(0, 0, 0, 0.2);
+      height: 48px;
+      width: 48px;
+      position: relative;
+      i{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      &:hover{
+        background-color: #F0F2F5;
+      }
+  }
+  span{
+    padding: 7px 12px;
+    border-radius: 8px;
+    background-color: #3b3b3b;
+    position: absolute;
+    bottom: 13%;
+    left: -108px;
+    font-size: 13px;
+    display: none;
+    color: #dbdada;
+  }
+  &:hover span{
+    display: block;
+  }
+    }
+  
+  }
+  .newMessageBox{
+    position: fixed;
+    right: 80px;
+    bottom: 0px;
+    background-color: #fff;
+    height: 455px;
+    width: 328px;
+    box-shadow: 0 12px 28px 0 rgba(0, 0, 0, 0.1),0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    .newMsgTitle{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 12px;
+      h4{
+        font-size: var(--regular-font-size);
+        color: var(--primary-font-color);
+        font-weight: 600;
+      }
+      .closebtn{
+        position: relative;
+        i{
+          svg{
+            font-size: 28px;
+            padding: 2px;
+            border-radius: 50%;
+            color: #bbbb;
+            &:hover{
+              background-color: #f5f7f8;
+            }
+          }
+         
+        }
+        &.active{
+          i{
+            svg{
+              color: var(--primary-color);
+            }
+          }
+        }
+        span{
+          padding: 7px 10px;
+    border-radius: 8px;
+    background-color: #3b3b3b;
+    position: absolute;
+    bottom: 34px;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 13px;
+    display: none;
+    color: #dbdada;
+    z-index: 666;
+    width: max-content;
+        }
+        &:hover{
+          span{
+            display: block;
+          }
+        }
+      }
+    }
+    .newInput{
+      display: flex;
+      padding: 0 16px;
+      gap: 22px;
+      p{
+        font-size: var(--regular-font-size);
+        color: var(--primary-font-color);
+        font-weight: 400;
+      }
+      input{
+        width: 100%;
+        font-size: var(--regular-font-size);
+        color: var(--primary-font-color);
+        font-weight: 400;
+        border: none;
+        background: none;
+        &:focus{
+          outline: none;
+        }
+      }
+    }
+    .divider{
+      background-color: #ced0d4;
+    width: 100%;
+    height: 1px;
+    margin-top: 20px;
+    }
+    &.active{
+      box-shadow: 0 12px 28px 0 rgba(0, 0, 0, 0.2),0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+@media screen and (max-width: 500px) {
+  .newMessageBox {
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  
+}

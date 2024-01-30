@@ -1,0 +1,134 @@
+.leftSidebarWrapper::-webkit-scrollbar {
+    width: 8px;
+    display: none;
+    
+  }
+  
+  /* Track */
+  .leftSidebarWrapper::-webkit-scrollbar-track {
+    background: #e4e4e4;
+    
+    
+  }
+  
+  /* Handle */
+  .leftSidebarWrapper::-webkit-scrollbar-thumb {
+    background: #c5c4c4;
+    border-radius: 5px;
+    width: 10px;
+  }
+.leftSidebarWrapper:hover::-webkit-scrollbar{
+    display: block;
+}
+  
+.leftSidebarWrapper{
+    overflow-y: scroll;
+    display: flex;
+    position: sticky;
+    top: 56px;
+    max-width: 360px;
+    height: 91.2vh;
+    bottom: 0;
+    min-width: 280px;
+    flex-basis: 360px;
+    ul{
+        width: 100%;
+        padding: 15px 0 15px 8px;
+        li {
+            display: flex;
+            align-items: center;
+            padding: 4px ;
+            border-radius: 8px;
+            a{
+                display: flex;
+            align-items: center;
+            border-radius: 8px;
+            text-decoration: none;
+            width: 100%;
+            }
+            h5{
+                font-size: var(--regular-font-size);
+                color: var(--primary-font-color);
+                font-weight: 500;
+                margin-left: 5px;
+            }
+            .userImage{
+                display: flex;
+                align-items: center;
+            }
+
+            &:hover{
+                background-color: var(--li-hover-bg);
+               
+            }
+        }
+        .seeMoreBtn{
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            padding-left: 5px;
+            padding-top: 5px;
+            cursor: pointer;
+            .downArrowSeemore{
+                padding: 15px;
+                border-radius: 50%;
+                background-color: var(--li-hover-bg);
+                position: relative;
+                .downArrow{
+                    position: absolute;
+                    transform: translate(-50%, -50%);
+                }
+            }
+            h5{
+                color: var( --primary-font-color);
+                font-weight: 500;
+                font-size: var(--regular-font-size);
+            }
+        }
+        .shortcutHead{
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 8px;
+            justify-content: space-between;
+            padding-top: 10px;
+            h4{
+                font-size: 1.0625rem;
+                color: #65676B;
+                font-weight: 500;
+            }
+            .editBtn{
+                cursor: pointer;
+                p{
+                    color: #0064D1;
+                    padding: 8px;
+                    opacity: 0;
+                    pointer-events: none;
+                    border-radius: 8px;
+                    &:hover{
+                        background-color: #ebebeb;
+                    }
+                }
+            }
+            &:hover p{
+                opacity: 1;
+                pointer-events: all;
+            }
+            &:before{
+                content: "";
+                position: absolute;
+                height: 1px;
+                width: 100%;
+                top: 6px;
+                left: 0;
+                background-color: #bfbfbf;
+            }
+        }
+    }
+
+}
+@media screen and (max-width: 1100px) {
+     .leftSidebarWrapper{
+        display: none;
+     }
+  }

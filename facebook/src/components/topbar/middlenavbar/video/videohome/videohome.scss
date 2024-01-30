@@ -1,0 +1,178 @@
+@import "../../../../rootvariables\ .scss";
+
+.videoHomeWrapper {
+  margin: 20px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  .videoCard {
+    height: fit-content;
+    max-width: 740px;
+    border-radius: 8px;
+    background-color: #fff;
+    .videoHead {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 12px;
+      padding-top: 16px;
+      .uploaderDetail {
+        display: flex;
+        gap: 12px;
+        .uploaderThumb {
+          img {
+            border-radius: 50%;
+            stroke: rgba(0, 0, 0, 0.1);
+            height: 48px;
+            width: 48px;
+          }
+        }
+        .uploaderNameWrapper {
+          margin-top: 4px;
+          .uploadname {
+            display: flex;
+            h6 {
+              font-size: var(--regular-font-size);
+              color: var(--primary-font-color);
+              font-weight: 600;
+              cursor: pointer;
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+            span {
+              font-weight: 600;
+              color: #0064d1;
+              margin-left: 12px;
+              position: relative;
+              cursor: pointer;
+              &::before {
+                position: absolute;
+                left: -8px;
+                top: 50%;
+                content: "";
+                height: 2px;
+                width: 2px;
+                background-color: #646363;
+              }
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+
+          p {
+            font-size: 0.8125rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+            i {
+              position: relative;
+              &::before {
+                position: absolute;
+                left: -8px;
+                top: 50%;
+                content: "";
+                height: 2px;
+                width: 2px;
+                background-color: #646363;
+              }
+            }
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+      .dotIcon {
+        svg {
+          font-size: 22px;
+        }
+      }
+    }
+    .videoCaption {
+      padding: 0 12px;
+      h4 {
+        font-size: 1.0625rem;
+        font-weight: 600;
+        color: var(--primary-font-color);
+      }
+      p {
+        font-size: 1.0625rem;
+        color: var(--primary-font-color);
+        font-weight: 400;
+      }
+    }
+    .videocontainer {
+      padding-top: 12px;
+      .video {
+        background-color: #000;
+        width: 100%;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+      }
+    }
+    .commentlikescontainer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 8px 12px;
+      .reactlinks {
+        .videoLinkUl {
+          display: flex;
+          gap: 5px;
+          .videoLinkList {
+            border-radius: 5px;
+            padding: 5px 10px;
+            position: relative;
+
+            .reactBtn {
+              display: flex;
+              align-items: center;
+              gap: 8px;
+              font-size: 0.8125rem;
+              color: var(--secondary-font-color);
+              font-weight: 600;
+              i {
+                filter: invert(39%) sepia(21%) saturate(200%) saturate(109.5%)
+                  hue-rotate(174deg) brightness(94%) contrast(86%);
+              }
+            }
+            &:hover {
+              background-color: var(--li-hover-bg);
+            }
+          }
+        }
+      }
+      .commentlikesCounter {
+        ul {
+          display: flex;
+          gap: 12px;
+          li {
+            p {
+              font-size: 0.8125rem;
+              color: var(--primary-font-color);
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+            &:nth-child(2),
+            &:nth-child(3) {
+              position: relative;
+              &::before {
+                position: absolute;
+                left: -8px;
+                top: 50%;
+                content: "";
+                height: 2px;
+                width: 2px;
+                background-color: #646363;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

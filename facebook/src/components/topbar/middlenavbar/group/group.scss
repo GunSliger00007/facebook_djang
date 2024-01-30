@@ -1,0 +1,240 @@
+@import '../../../rootvariables\ .scss';
+.marketplaceWrapper{
+    margin-top: 56px;
+    background-color: #F0F2F5;
+    display: flex;
+    flex-direction: row;
+    .marketplaceLinkWrapper{
+        position: sticky;
+        top: 56px;
+        bottom: 0;
+        max-height: calc(100vh - 56px);
+        width: 360px;
+        z-index: 2;
+        background-color: #fff;
+       
+        ul{
+            flex-direction: column;
+            display: flex;
+        }
+        .videoTitle{
+            display: flex;
+            justify-content: space-between;
+            margin: 12px 16px 8px 16px;
+            h1{
+                font-size: 1.5rem;
+                color: var(--primary-font-color);
+            }
+            .videosetIcon{
+                background-color: var(--comment-bg);
+                width: 36px;
+                height: 36px;
+                position: relative;
+                border-radius: 50%;
+                cursor: pointer;
+                i{
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                }
+                &:hover{
+                    background-color: var( --icon-hover-color);
+                }
+            }
+        }
+        .videoLinkBoxShadow{
+                background-image: url(../../../../asssets/videoLinkBoxShadow.png);
+                background-size: 7px 1px;
+                top: 0;
+                bottom: 0;
+                right: -6px ;
+                background-repeat: repeat-y;
+                width: 7px;
+                position: absolute;
+                z-index: 1;
+        }
+        .searchInput{
+            background-color: var( --searchBtn-bg);
+            margin: 8px 16px;
+            min-height: 36px;
+            min-width: 40px;
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            padding: 0 8px;
+            svg{
+                font-size: 22px;
+                color: var(--secondary-font-color);
+            }
+            input{
+                font-size: .9375rem;
+                color: var(--primary-font-color);
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background: none;
+                border: none;
+                padding-left: 5px;
+                &:focus{
+                    outline: none;
+                }
+            }
+        }
+        
+        .categoryallwrapper::-webkit-scrollbar {
+            width: 8px;
+            border-radius: 8px;
+          }
+          
+          .categoryallwrapper::-webkit-scrollbar-track {
+            background: transparent;
+            width: 10px;
+            border-radius: 8px;
+            
+          }
+          
+          .categoryallwrapper::-webkit-scrollbar-thumb {
+            background: transparent;
+            border-radius: 5px;
+            width: 10px;
+          }
+        .categoryallwrapper:hover::-webkit-scrollbar{
+            background: #e4e4e4;
+        }
+        .categoryallwrapper:hover::-webkit-scrollbar-thumb {
+            background: #c5c4c4;
+            border-radius: 5px;
+            width: 10px;
+          }
+        .categoryallwrapper{
+            overflow-y: scroll;
+            height: calc(100vh - 164px);
+            .marketplaceLinks{
+                padding: 12px 8px;
+                padding-bottom: 0;
+                .groupLink{
+                    display: flex;
+                    flex-direction: column;
+                    a{
+                        border-radius: 10px;
+                        min-height: 52px;
+                        cursor: pointer;
+                        position: relative;
+                        text-decoration: none;
+                        display: flex;
+                        align-items: center;
+                        color: var(--primary-font-color);
+                        padding: 0 8px;
+                        .marketplaceLinkTitle{
+                            display: flex;
+                            gap: 12px;
+                            align-items: center;
+                            .groupLinkIcon{
+                                position: relative;
+                                height: 36px;
+                                width: 36px;
+                                border-radius: 50%;
+                                background-color: var(--comment-bg);
+                                i{
+                                    position: absolute;
+                                    left: 50%;
+                                    top: 50%;
+                                    transform: translate(-50%, -50%);
+
+                                }
+                            }
+                            p{
+                                font-size: var(--regular-font-size);
+                                color: var(--primary-font-color);
+                                font-weight: 600;
+                            }
+                        }
+                        &:hover{
+                            background-color: var(--li-hover-white-bg);
+                        }
+                        &.active{
+                            background-color: var(--li-hover-white-bg);
+                            .marketplaceLinkTitle{
+                                .groupLinkIcon{
+                                    background-color: #1877F2;
+                                    i{
+                                        filter: invert(100%);
+                                    }   
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .createNewList{
+                padding: 10px 16px;   
+                button{
+                    background: none;
+                    border: none;
+                    color: #0064D1;
+                    font-size: .9375rem;
+                    font-weight: 600;  
+                    font-family: inherit;     
+                    width: 100%;
+                    background-color: #EBF5FF;
+                    border-radius: 6px; 
+                    justify-content: center;
+                    height: 36px;
+                    align-items: center;
+                    gap: 10px;
+                    display: flex;
+                    cursor: pointer;
+                    &:hover{
+                        background-color: #e0eaf5;
+                    }
+                    i{
+                        height: 15px;
+                    }
+                     
+                }
+            }
+            .groupListHead{
+                display: flex;
+                justify-content: space-between;
+                margin-right: 16px;
+                align-items: center;
+                .groupSee{
+                    width: initial !important;
+                }
+            }
+            .groupLink{
+                min-height: 64px !important;
+                .groupTitle{
+                    display: flex;
+                    gap: 12px;
+                    align-items: center;
+                    .groupThumb{
+                        width: 48px;
+                        height: 48px;
+                        border-radius: 6px;
+                        border: 1px solid #eaeaea;
+                        overflow: hidden;
+                        img{
+                            width: 100%;
+                        }
+                    }
+                    .groupName{
+                        h5{
+                            font-size: var(--regular-font-size);
+                            color: var(--primary-font-color);
+                            font-weight: 600;
+                        }
+                        p{
+                            font-size: var(--small-font-size);
+                            color: var(--secondary-font-color);
+                        }
+                    }
+                }
+            }
+           
+        }
+       
+    }
+    .groupOutlet{
+        margin:  0 auto;
+    }
+}

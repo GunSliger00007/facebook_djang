@@ -1,0 +1,99 @@
+@import '../../../../rootvariables\ .scss';
+.browseallWrapper{
+    padding: 0 32px;
+    width: 100%;
+    .browseAllHead{
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 0;
+        align-items: center;
+        h2{
+            font-size: 1.25rem;
+        }
+        li{
+            a{
+                text-decoration: none;
+                .locationLink{
+                    display: flex;
+                    align-items: center;
+                    i{
+                        svg{
+                            fill: var(--primary-color);
+                        }
+                    }
+                    .locationWrapper{
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        span{
+                            color: var(--primary-color);
+                            font-size: .9375rem;
+                            &:first-child{
+                                position: relative;
+                                &::after{
+                                    content: '';
+                                    height: 2px;
+                                    width: 2px;
+                                    position: absolute;
+                                    right: -6px;
+                                    top: 10px;
+                                    background-color: var(--primary-color);
+                                    border-radius: 50%;
+                                }
+                            }
+                        }
+                    }
+                   
+                }
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    .allItemWrapper{
+        ul{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            row-gap: 20px;
+            li{
+                width: 301px;
+                a{
+                    text-decoration: none;
+                    .saleItemCard{
+                        .itemThumb{
+                            height: 301px;
+                            width: 301px;
+                            border-radius: 8px;
+                            overflow: hidden;
+                            img{
+                                width: 100%;
+                            }
+                        }
+                        .itemDetails{
+                            padding-top: 10px;
+                            .itemPrice{
+                                font-size: 1.0625rem;
+                                color: var(--primary-font-color);
+                                font-weight: 600;
+                            }
+                            .itemName{
+                                font-size: var(--regular-font-size);
+                                color: var(--primary-font-color);
+                                -webkit-box-orient: vertical;
+                                -webkit-line-clamp: 2;
+                                display: -webkit-box;
+                                overflow: hidden;
+                                                        }
+                            .location{
+                                font-size: .8125rem;
+                                color: var(--secondary-font-color);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

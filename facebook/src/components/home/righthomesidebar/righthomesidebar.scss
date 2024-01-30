@@ -1,0 +1,251 @@
+.rightHomeWrapper::-webkit-scrollbar {
+    width: 8px;
+    
+  }
+  
+  .rightHomeWrapper::-webkit-scrollbar-track {
+    background: transparent;
+    width: 10px;
+    
+  }
+  
+  .rightHomeWrapper::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 5px;
+    width: 10px;
+  }
+.rightHomeWrapper:hover::-webkit-scrollbar{
+    background: #e4e4e4;
+}
+.rightHomeWrapper:hover::-webkit-scrollbar-thumb {
+    background: #c5c4c4;
+    border-radius: 5px;
+    width: 10px;
+  }
+
+.rightHomeWrapper{
+    overflow-y: scroll;
+    position: sticky;
+    top: 56px;
+    max-width: 360px;
+    height: 91.2vh;
+    bottom: 0;
+    min-width: 280px;
+    flex-basis: 360px;
+    .positionrightHome{
+    li{
+        display: flex;
+        align-items: center;
+        padding: 6px;
+        border-radius: 8px;
+        cursor: pointer;
+        &:hover{
+            background-color:  #e7e7e7;
+        }
+        
+    }
+    p{
+        font-size: 1.0625rem;
+        font-weight: 600;
+        color: var(--secondary-font-color);
+        padding: 0 8px;
+    }
+    .sidebarnotification{
+        padding-top: 20px;
+       
+        ul{
+            padding: 5px 0;
+            border-bottom: 1px solid #c5c5c5;
+            li{
+                display: flex;
+                cursor: pointer;
+                i{
+                    transform: scale(.777);
+                }
+                span{
+                    font-size: var(--regular-font-size);
+                    color: var(--primary-font-color);
+                    strong{
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+    .onlineFriendslist{
+        padding-top: 10px;
+        .onlineHead{
+            display: flex;
+            justify-content: space-between;
+            .searchIcon{
+                display: flex;
+                gap: 15px;
+                svg{
+                    filter: invert(39%) sepia(21%) saturate(200%) saturate(109.5%) hue-rotate(174deg) brightness(94%) contrast(86%);
+                    font-size: 22px;
+                }
+            }
+        }
+        .friendList{
+            ul{
+                padding: 8px 0;
+                border-bottom: 1px solid #c5c5c5;
+                li{
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    color: var(--primary-font-color);
+                    font-weight: 600;
+                    .friendsmallimage{
+                        position: relative;
+                        img{
+                            width: 28px;
+                            border-radius: 50%;
+                        }
+                        &::after{
+                            position: absolute;
+                            bottom: 4px;
+                            right: -1px;
+                            content: "";
+                            background-color: var(--online-green-dot-bg);
+                            height: 5px;
+                            width: 5px;
+                            border: 2px solid #f3f3f3;
+                            border-radius: 50%;
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+    .groupChats{
+        padding-top: 10px;
+        .groupList{
+            ul{
+                padding: 8px 0;
+                li{
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    color: var(--primary-font-color);
+                    font-weight: 600;
+                    .groupsmallimage{
+                        position: relative;
+                    img{
+                        height: 28px;
+                        width: 28px;
+                        border-radius: 50%;
+                    }
+                    &::after{
+                        position: absolute;
+                        bottom: 4px;
+                        right: -1px;
+                        content: "";
+                        background-color: var(--online-green-dot-bg);
+                        height: 5px;
+                        width: 5px;
+                        border: 2px solid #f3f3f3;
+                        border-radius: 50%;
+                    }
+                }
+                }
+                .newgroup{
+                    i{
+                        padding: 14px;
+                        background-color:#E4E6EB;
+                        border-radius: 50%;
+                        position: relative;
+                        svg{
+                            position: absolute;
+                            left: 6px;
+                            top: 6px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .friendDetailsBox {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        width: 300px;
+      
+        .friendDetails {
+          display: flex;
+          flex-direction: column;
+      
+          .chatHeader {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+      
+            .friendInfo {
+              display: flex;
+              align-items: center;
+      
+              .friendImage {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                margin-right: 10px;
+              }
+      
+              .friendName {
+                font-weight: bold;
+              }
+            }
+      
+            .closeButton {
+              cursor: pointer;
+              color: #888;
+            }
+          }
+      
+          .chatContent {
+            padding: 10px;
+            height: 200px;
+            overflow-y: auto;
+          }
+      
+          .chatInput {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-top: 1px solid #eee;
+      
+            input {
+              flex: 1;
+              padding: 8px;
+              margin-right: 10px;
+              border: 1px solid #ccc;
+              border-radius: 4px;
+              outline: none;
+            }
+      
+            .sendButton {
+              background-color: var(--primary-color);
+              color: #fff;
+              border: none;
+              padding: 8px 12px;
+              border-radius: 4px;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+      
+}
+}
+@media screen and (max-width: 900px) {
+    .rightHomeWrapper{
+       display: none;
+    }
+ }

@@ -1,0 +1,403 @@
+.loginWrapper {
+  .logInContainerWrapper {
+    background: #f0f2f5;
+    padding-bottom: 132px;
+    padding-top: 92px;
+    .logInContainer {
+      display: flex;
+      width: 980px;
+      margin: 0 auto;
+      justify-content: space-between;
+      .leftSideLogInSection {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        .textLogo {
+          img {
+            margin: -20px;
+            height: 70px;
+          }
+        }
+        .logInTexts {
+          h2 {
+            font-size: 36px;
+            color: #333;
+            font-weight: 400;
+            font-family: sans-serif;
+          }
+          p {
+            color: #606770;
+            font-family: SFProText-Regular, Helvetica, Arial, sans-serif;
+            font-size: 15px;
+            line-height: 24px;
+            margin-bottom: 12px;
+          }
+        }
+        .userAccountsWrapper {
+          ul {
+            display: flex;
+            gap: 18px;
+            li {
+              a {
+                text-decoration: none;
+                .accountCard1 {
+                  box-shadow: 0 0 0 1px #dddfe2;
+                  display: block;
+                  transition: all 0.2s ease-out;
+                  cursor: pointer;
+                  position: relative;
+                  width: 160px;
+                  background-color: #fff;
+                  text-align: center;
+                  border-radius: 8px;
+                  .userImage {
+                    height: 160px;
+                    img {
+                      border-radius: 8px 8px 0 0;
+                    }
+                  }
+                  .notificationCounter {
+                    position: absolute;
+                    right: -5px;
+                    top: -5px;
+
+                    span {
+                      background-color: #fa3e3e;
+                      border-radius: 24px;
+                      box-shadow: -1px 1px 2px 0 rgba(0, 0, 0, 0.3);
+                      color: #fff;
+                      cursor: default;
+                      font-size: 13px;
+                      height: 24px;
+                      line-height: 24px;
+                      position: relative;
+                      text-align: center;
+                      display: block;
+                      width: 24px;
+                      p {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        color: #fff;
+                      }
+                    }
+                  }
+                  .closeBtn {
+                    position: absolute;
+                    left: 4px;
+                    top: 4px;
+                    transition: all 100ms cubic-bezier(0.08, 0.52, 0.52, 1);
+                    i {
+                      position: relative;
+                      background-color: rgba(0, 0, 0, 0.3);
+                      border-radius: 16px;
+                      height: 16px;
+                      transition: all 100ms cubic-bezier(0.08, 0.52, 0.52, 1);
+                      width: 16px;
+                      display: block;
+                      svg {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        color: invert($color: #000000);
+                      }
+                    }
+                  }
+                  .cardBottomText {
+                    border-bottom-left-radius: 8px;
+                    border-bottom-right-radius: 8px;
+                    padding: 12px;
+                    p {
+                      color: #4b4f56;
+                      font-size: 18px;
+                      line-height: 22px;
+                      font-family: SFProText-Medium, Helvetica, Arial,
+                        sans-serif;
+                    }
+                  }
+                  &:hover {
+                    box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+                    border-radius: 8px;
+                    .closeBtn {
+                      position: absolute;
+                      left: -8px;
+                      top: -8px;
+                      i {
+                        background-color: #fff;
+                        height: 26px;
+                        width: 26px;
+                        box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4); /* Adjust the values as needed */
+                        svg {
+                          position: absolute;
+                          top: 50%;
+                          left: 50%;
+                          transform: translate(-50%, -50%);
+                          color: initial;
+                          opacity: 0.5;
+                          font-size: 20px;
+                        }
+                      }
+                    }
+                  }
+                }
+                .addaccount {
+                  box-shadow: 0 0 0 1px #dddfe2;
+                  display: block;
+                  transition: all 0.2s ease-out;
+                  cursor: pointer;
+                  position: relative;
+                  width: 160px;
+                  background-color: #fff;
+                  text-align: center;
+                  border-radius: 8px;
+                  .plusIcon {
+                    align-items: center;
+                    background-color: #f5f6f7;
+                    border-top-left-radius: 4px;
+                    border-top-right-radius: 4px;
+                    display: flex;
+                    height: 160px;
+                    justify-content: center;
+                    width: 160px;
+                    i {
+                      position: relative;
+                      height: 42px;
+                      width: 42px;
+                      background-color: #1877f2;
+                      border-radius: 50%;
+                      svg {
+                        position: absolute;
+                        font-size: 22px;
+                        color: #fff;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                      }
+                    }
+                  }
+                  .cardBottomText {
+                    border-bottom-left-radius: 8px;
+                    border-bottom-right-radius: 8px;
+                    padding: 12px;
+                    p {
+                      color: #1877f2;
+                      font-size: 18px;
+                      line-height: 22px;
+                      font-family: SFProText-Medium, Helvetica, Arial,
+                        sans-serif;
+                    }
+                  }
+                  &:hover {
+                    box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+                    border-radius: 8px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .rightSideLogInSection {
+      .logInforms {
+        background-color: #fff;
+        border: none;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+        box-sizing: border-box;
+        margin: 40px 0 0;
+        padding: 10px 0 28px;
+        width: 396px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        .logInInputs {
+          font-size: 17px;
+          padding: 14px 16px;
+          width: 330px;
+          background: #ffffff
+            url(https://static.xx.fbcdn.net/rsrc.php/v3/yU/r/O7nelmd9XSI.png)
+            repeat-x;
+          border: 1px solid #dddfe2;
+          color: #1d2129;
+          font-family: Helvetica, Arial, sans-serif;
+          height: 22px;
+          line-height: 16px;
+          vertical-align: middle;
+          border-radius: 6px;
+          transition: all 0.2s;
+          &:focus {
+            outline: none;
+            border: 1px solid #1877f2;
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+          }
+        }
+        .emailInput {
+          padding: 6px 0;
+        }
+        .passwordInput {
+          padding: 6px 0;
+          position: relative;
+         button{
+            background:none ;
+            border: none;
+            padding: 7px 8px;
+            border-radius: 50%;
+            cursor: pointer;
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translate(0, -50%);
+            &:hover{
+                background-color: #e3e3e3;
+            }
+         }
+        }
+        .logInBtn {
+          padding-top: 10px;
+          button {
+            background-color: #1877f2;
+            border: none;
+            border-radius: 6px;
+            font-size: 20px;
+            line-height: 48px;
+            width: 364px;
+            font-weight: bold;
+            color: #fff;
+            cursor: pointer;
+          }
+        }
+        .forgotPassword {
+          margin-top: 16px;
+          button {
+            color: #1877f2;
+            font-size: 14px;
+            font-weight: 500;
+            background: none;
+            border: none;
+            cursor: pointer;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+        .logIndivider {
+          align-items: center;
+          border-bottom: 1px solid #dadde1;
+          display: flex;
+          margin: 22px 0;
+          text-align: center;
+          width: 364px;
+        }
+        .createNewAccount {
+          button {
+            border: none;
+            border-radius: 6px;
+            font-size: 17px;
+            line-height: 48px;
+            padding: 0 16px;
+            background-color: #42b72a;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s;
+            &:hover {
+              background-color: #3cab26;
+            }
+          }
+        }
+      }
+      .createPage {
+        p {
+          border-top: none;
+          color: #1c1e21;
+          font-family: SFProText-Regular, Helvetica, Arial, sans-serif;
+          font-size: 14px;
+          font-weight: normal;
+          padding-top: 0;
+          margin-top: 28px;
+          text-align: center;
+          a {
+            color: #000000;
+            text-decoration: none;
+            font-weight: bold;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1075px) {
+  .loginWrapper {
+    .logInContainerWrapper {
+      .logInContainer {
+        margin: 0 40px;
+        width: auto;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 850px) {
+    .loginWrapper {
+      .logInContainerWrapper {
+        .logInContainer {
+          flex-direction: column;
+          align-items: center;
+          .leftSideLogInSection{
+            align-items: center;
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    .loginWrapper {
+      .logInContainerWrapper {
+        padding-top: 30px;
+        padding-bottom: 50px;
+        .logInContainer {
+            width: 100%;
+         margin: 0;
+          .leftSideLogInSection{
+            align-items: center;
+          }
+          .rightSideLogInSection{
+            .logInforms{
+                width: 100%;
+                input{
+                    width: 250px;
+                }
+                .logInBtn{
+                    button{
+                        width: 250px;
+                    }
+                }
+            }
+          }
+        }
+      }
+    }
+  }
+/* loginpage.scss */
+
+.loginWrapper {
+  position: relative;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Adjust the alpha value for transparency */
+  backdrop-filter: blur(5px); /* Adjust the blur value */
+  z-index: 1;
+}
+
+/* ... (Existing styles remain the same) ... */

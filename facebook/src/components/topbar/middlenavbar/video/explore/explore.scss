@@ -1,0 +1,35 @@
+@import '../../../../rootvariables\ .scss';
+
+.exploreWrapper{
+    width: 60%;
+    margin-top: 12px;
+    h5{
+        font-size: 1.25rem;
+        color: var( --primary-font-color);
+        font-weight: 600;
+    }
+    .exploreLinks{
+        padding-top: 10px;
+        ul{
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            li{
+                padding: 15px 0;
+                background-color: #1877F2;
+                font-size: 1.0625rem;
+                font-weight: 600;
+                color: #fff;
+                border-radius: 8px;
+                max-width: 342px;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                i{
+                    margin-left: 16px;
+                    filter: invert(100%);
+                }
+            }
+        }
+    }
+}

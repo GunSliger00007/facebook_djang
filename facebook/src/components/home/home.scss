@@ -1,0 +1,15 @@
+.home{
+    display: flex;
+    justify-content: space-between;
+    background-color: #F0F2F5;
+    top: 56px;
+    position: relative;
+
+}
+
+@media screen and (max-width: 500px) {
+    .home{
+        width: 100%;
+        justify-content: center;
+    }
+}

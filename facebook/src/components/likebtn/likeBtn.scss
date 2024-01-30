@@ -1,0 +1,117 @@
+.LikeCompo {
+    width: 100%;
+    .likeBtn {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      justify-content: center;
+      .likeIcon{
+        height: 18px;
+      }
+      p {
+        font-size: 16px;
+        color: #65676B;
+      
+      }
+      .liked{
+        color: rgb(8, 102, 255);
+    }
+    .love{
+        color: rgb(243, 62, 88);
+    }
+    .care{
+        color: rgb(247, 177, 37);
+    }
+    .haha{
+        color: rgb(247, 177, 37);
+    }
+    .sad{
+        color: rgb(247, 177, 37);
+    }
+    .wow{
+        color: rgb(247, 177, 37);
+    }
+    .angry{
+        color: rgb(233, 113, 15);
+    }
+    }
+  
+    .reactButtonsWrapper {
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      opacity: 0;
+      transition: all 0.2s ease-in-out;
+      pointer-events: none;
+      z-index: 999;
+  
+      ul {
+        display: flex;
+        width: 313px;
+        height: 49px;
+        border-radius: 25px;
+        background-color: #fff;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 8px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  
+        li {
+          position: relative;
+  
+          .gifIcon {
+            img {
+              width: 39px;
+              height: 39px;
+              transition: all 0.2s ease-in-out;
+            }
+          }
+  
+          span {
+            opacity: 0;
+            position: absolute;
+            left: 50%;
+            top: -20px;
+            transform: translate(-50%, -50%);
+            font-size: .75rem;
+            padding: 3px 5px;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 15px;
+            transition: 0.1s all ease-in-out;
+          }
+  
+          &:hover {
+            img {
+              transform: scale(1.25);
+            }
+  
+            span {
+              opacity: 1;
+            }
+          }
+  
+        }
+      }
+    }
+  
+    &:hover {
+      .reactButtonsWrapper {
+        opacity: 1;
+        bottom: 32px;
+        pointer-events: all;
+      }
+    }
+  }
+  @keyframes iconAnime {
+    0% {
+      animation-timing-function: cubic-bezier(.19,1,.22,1);
+      transform: scale(1) rotate(0deg);
+    }
+    50% {
+      animation-timing-function: cubic-bezier(.95,.05,.795,.035);
+      transform: scale(1.24) rotate(-8deg);
+    }
+    /* Add more keyframes if needed */
+  }
+  
