@@ -35,8 +35,7 @@ const AppRoutes = ({ handleLogout }) => {
       <Router>
         <Topbar handleLogout={handleLogout} />
         <Routes>
-          <Route path='/register' element={<Register/>}/>
-          <Route path="/" element={<Home />} />
+          <Route path="/facebook_djang" element={<Home />} />
           <Route path="/video" element={<Video />}>
             <Route path="" element={<Videohome />} />
             <Route path="live" element={<Live />} />

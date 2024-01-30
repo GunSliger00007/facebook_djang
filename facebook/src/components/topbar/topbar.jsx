@@ -44,7 +44,7 @@ export default function Topbar() {
             <Link
               to="/"
               className={`${
-                isActiveLink("/Facebook") ? "active " : ""
+                isActiveLink("/facebook_djang") ? "active " : ""
               }responsiveTopbar`}
             >
               <div className="topbarMenuspacing">
