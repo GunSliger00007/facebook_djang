@@ -42,7 +42,7 @@ export default function Topbar() {
         <div className="middleSectionTopbar">
           <ul>
             <Link
-              to="/Facebook"
+              to="/"
               className={`${
                 isActiveLink("/Facebook") ? "active " : ""
               }responsiveTopbar`}
