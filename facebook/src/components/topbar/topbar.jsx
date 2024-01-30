@@ -42,7 +42,7 @@ export default function Topbar() {
         <div className="middleSectionTopbar">
           <ul>
             <Link
-              to="/"
+              to="/facebook_djang"
               className={`${
                 isActiveLink("/facebook_djang") ? "active " : ""
               }responsiveTopbar`}
