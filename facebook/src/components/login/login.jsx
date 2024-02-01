@@ -36,7 +36,7 @@ export default function Login({ onLogin }) {
       const formData = { email, password };
 
       // Make a POST request to the login API endpoint
-      const response = await axios.post('http://localhost:8000/api/login/', formData);
+      const response = await axios.post('https://backend-kdb3.onrender.com/api/login/', formData);
 
       // Extract access and refresh tokens from the response
       const { access, refresh } = response.data;

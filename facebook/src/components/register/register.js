@@ -28,7 +28,7 @@ function Register({ onClose }) {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:8000/api/signup/', formData);
+      const response = await axios.post('https://backend-kdb3.onrender.com/api/signup/', formData);
 
       console.log(response.data);
 
