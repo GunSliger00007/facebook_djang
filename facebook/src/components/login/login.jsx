@@ -1,76 +1,69 @@
-// Import necessary dependencies
 import React, { useState } from "react";
 import axios from 'axios';
-import "./loginpage.scss";  // Import styles for the login page
-import FacebookTextLogo from "../../asssets/facebooktextlogo.svg";  // Import Facebook logo
-import UserImage from "../../asssets/createStoryUserImage.jpg";  // Import user image placeholder
-import { GrFormClose } from "react-icons/gr";  // Import close icon
-import { FaPlus, FaEye, FaEyeSlash } from "react-icons/fa";  // Import plus, eye, and eye-slash icons
-import Register from "../register/register"; // Import the Register component
+import "./loginpage.scss";
+import FacebookTextLogo from "../../asssets/facebooktextlogo.svg";
+import UserImage from "../../asssets/createStoryUserImage.jpg";
+import { GrFormClose } from "react-icons/gr";
+import { FaPlus, FaEye, FaEyeSlash } from "react-icons/fa";
+import Register from "../register/register";
 
-// Define the Login component
 export default function Login({ onLogin }) {
-  // Define state variables for email, password, and showPassword
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [email, setEmail] = useState('');
   const [showRegisterPopup, setShowRegisterPopup] = useState(false);
 
-  // Handle input change for email and password fields
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     if (name === 'password') setPassword(value);
     if (name === 'email') setEmail(value);
-    setShowPassword(!!value);  // Show password button if there is a value
+    setShowPassword(!!value);
   };
 
-  // Toggle password visibility
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
 
-  // Handle login button click
   const handleLoginClick = async () => {
     try {
-      // Prepare form data with email and password
       const formData = { email, password };
-
-      // Make a POST request to the login API endpoint
       const response = await axios.post('https://backend-kdb3.onrender.com/api/login/', formData);
 
-      // Extract access and refresh tokens from the response
       const { access, refresh } = response.data;
-
-      // Store tokens in localStorage for future use
       localStorage.setItem('accessToken', access);
       localStorage.setItem('refreshToken', refresh);
 
-      // Set Authorization header for future Axios requests
       axios.defaults.headers.common['Authorization'] = `Bearer ${access}`;
 
       console.log(response.data);
-
-      // Show a success alert
       window.alert('Login successful!');
       
-      // Call the onLogin function from the parent component
       onLogin();
-
-      // If you want to redirect, you can use window.location.href
-      // window.location.href = "/Facebook";
     } catch (error) {
-      // Log any errors to the console and show an error alert
       console.error(error);
       window.alert('Login failed. Please check your credentials and try again.');
     }
   };
 
-  // Function to toggle the visibility of the registration popup
   const toggleRegisterPopup = () => {
     setShowRegisterPopup(!showRegisterPopup);
   };
 
-  // Render the Login component
+  // Handle Enter key press
+  const handleKeyPress = (event) => {
+    if (event.key === 'Enter') {
+      handleLoginClick();
+    }
+  };
+
+  // Add event listener for Enter key press
+  React.useEffect(() => {
+    document.addEventListener('keypress', handleKeyPress);
+    return () => {
+      document.removeEventListener('keypress', handleKeyPress);
+    };
+  }, [email, password]);
+
   return (
     <div className="loginWrapper">
       <div className="logInContainerWrapper">

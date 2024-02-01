@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import AppRoutes from './routes/AppRoutes';
 import Login from './components/login/login';
 
@@ -9,19 +9,6 @@ function App() {
     setIsLoggedIn(true);
     // Additional logic you want to perform on login
   };
-
-  const handleKeyPress = (event) => {
-    if (event.key === 'Enter') {
-      handleLogin();
-    }
-  };
-
-  useEffect(() => {
-    document.addEventListener('keypress', handleKeyPress);
-    return () => {
-      document.removeEventListener('keypress', handleKeyPress);
-    };
-  }, []);
 
   return (
     <>
