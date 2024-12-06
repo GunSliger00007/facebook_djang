@@ -1,2 +1,4 @@
 venv/
 facebook/node_modules
+nginx/
+react/
