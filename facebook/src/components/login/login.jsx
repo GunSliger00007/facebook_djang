@@ -26,16 +26,8 @@ export default function Login({ onLogin }) {
 
   const handleLoginClick = async () => {
     try {
-      const formData = { email, password };
-      const response = await axios.post('https://backend-kdb3.onrender.com/api/login/', formData);
-
-      const { access, refresh } = response.data;
-      localStorage.setItem('accessToken', access);
-      localStorage.setItem('refreshToken', refresh);
-
-      axios.defaults.headers.common['Authorization'] = `Bearer ${access}`;
-
-      console.log(response.data);
+      
+   
       window.alert('Login successful!');
       
       onLogin();

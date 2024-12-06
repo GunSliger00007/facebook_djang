@@ -25,9 +25,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-8(k_@4)wbi8ogg@8yht7)g+!_3m5wbh*@^)be+@0!_nxfak3o='
 
 # SECURITY WARNIG: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 AUTH_USER_MODEL = 'djangoapi.CustomUser'
 # Application definition
